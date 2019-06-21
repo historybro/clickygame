@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import cards from "./cards.json";
 import Nav from "./components/Nav";
 import Jumbo from "./components/jumbo";
@@ -7,7 +7,12 @@ import Card from "./components/Card";
 import Win from "./components/Win"
 import "./app.css";
 
+const disp0 = {
+  display:"none"
+}
+
 class App extends Component {
+  
 
   state = {
     cards,
@@ -21,26 +26,26 @@ class App extends Component {
 
   playBtn = () => {
     console.log("Clicked Play!");
-    this.setState({rules: false});
-    this.setState({playing: true});
-    this.setState({win: false});
-    this.setState({score: 0});
+    this.setState({ rules: false });
+    this.setState({ playing: true });
+    this.setState({ win: false });
+    this.setState({ score: 0 });
 
   }
 
   clickCount = id => {
     this.state.cards.find((x, i) => {
       if (x.id === id) {
-        if(cards[i].count === 0){
-          cards[i].count = cards[i].count +1;
-          this.setState({score: this.state.score +1}, function(){
-            this.setState({message: "You guessed right!"});
+        if (cards[i].count === 0) {
+          cards[i].count = cards[i].count + 1;
+          this.setState({ score: this.state.score + 1 }, function () {
+            this.setState({ message: "You guessed right!" });
             console.log("Score:" + this.state.score);
-            if(this.state.score === 12) {
-              this.setState({highscore: 12});
-              this.setState({message: "You win!"});
-              this.setState({win: true});
-              this.setState({playing: false});
+            if (this.state.score === 12) {
+              this.setState({ highscore: 12 });
+              this.setState({ message: "You win!" });
+              this.setState({ win: true });
+              this.setState({ playing: false });
             }
           });
           this.state.cards.sort(() => Math.random() - .9)
@@ -55,39 +60,40 @@ class App extends Component {
 
   gameOver = () => {
     if (this.state.score > this.state.highscore) {
-      this.setState({highscore: this.state.score}, function() {
+      this.setState({ highscore: this.state.score }, function () {
         console.log("New High Score: " + this.state.highscore);
       });
     }
     this.state.cards.forEach(card => {
-      card.count =0;
+      card.count = 0;
     });
-    this.setState({message: "You lose!"});
-    this.setState({score: 0});
+    this.setState({ message: "You lose!" });
+    this.setState({ score: 0 });
     return true;
   }
 
   render() {
     return (
       <div>
-        <Nav scr={this.state.score} highscr={this.state.highscore} message={this.state.message}/>
+        <Nav scr={this.state.score} highscr={this.state.highscore} message={this.state.message} />
         <div className="container">
-          {this.state.rules ? <Jumbo btn={this.playBtn}/> :null }
+          {this.state.rules ? <Jumbo btn={this.playBtn} /> : null}
           {this.state.playing ? <Wrap>
-          {this.state.cards.map(props => (
-            <Card
-              key={props.id}
-              id={props.id}
-              image={props.image}
-              name={props.name}
-              clickCount={this.clickCount}
-            />            
-          ))}
-          </Wrap> :null }
-          {this.state.win ? <Win btn={this.playBtn}/> : null}
+            {this.state.cards.map(props => (
+              <Card
+                key={props.id}
+                id={props.id}
+                image={props.image}
+                name={props.name}
+                clickCount={this.clickCount}
+              />
+            ))}
+          </Wrap> : null}
+          {this.state.win ? <Win btn={this.playBtn} /> : null}
+          <audio src="fs420.mp3" style={disp0} autoPlay></audio>
         </div>
       </div>
-      
+
     )
   }
 
