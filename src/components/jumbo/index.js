@@ -1,14 +1,13 @@
 import React from "react";
 import "./jumbo.css";
 
-const Jumbo = props => {
-  console.log(props);
+const Jumbo = props => {  
   return (
-    <header className="header">
-      <h2>Click on images to earn points</h2>
-      <h3>But click an image twice and you'll have to start again!</h3>
-      <button className="btn btn-success">PLAY</button>
-    </header>
+    <div className="Jumbotron">
+      <h2 className="textbar">Click on images to earn points</h2>
+      <h3 className="textbar">But click an image twice and you'll have to start again!</h3>
+      <button className="btn" onClick={props.btn}>PLAY</button>
+    </div>
   );
 }
 

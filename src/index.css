@@ -3,4 +3,5 @@ body {
     padding: 0;
     background-image: url("https://www.imgbase.info/images/safe-wallpapers/digital_art/photo_manipulation/61721_photo_manipulation_vaporwave.jpg");
     background-position: center -6%;
-  }
+    overflow: hidden;
+}
