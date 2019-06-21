@@ -1,0 +1,38 @@
+/* #252525 dark gray
+#FFFFFF white
+#F7F0F0 off white
+#FA5F1A orange*/
+
+.navScore, .brand, .navMessage {
+    list-style-type: none;
+    font-family: 'Monoton', cursive;
+    color: #35CCD5;
+    text-shadow: 2px 2px #A637AD;
+    letter-spacing: 1px;
+    display: inline;
+}
+
+a {
+    color: #35CCD5;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: black;
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4f2b58c8-62db-49da-9bf7-dc813ecd5c46/danqa2p-7a88aaf1-44f8-4eba-8b30-fd7a072e7de7.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzRmMmI1OGM4LTYyZGItNDlkYS05YmY3LWRjODEzZWNkNWM0NlwvZGFucWEycC03YTg4YWFmMS00NGY4LTRlYmEtOGIzMC1mZDdhMDcyZTdkZTcuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.B9BxgykFwlL80Ihx-pz8kxdq_YJY1yurBRNdT-SMrHM");
+    min-height: 70px;
+    position: fixed;
+    width: 100%;
+    -webkit-box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    box-shadow: 0 14px 28px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.22);
+    color: #fff;
+    font-size: calc(10px + 12 * (100vw - 320px)/ 800);
+    z-index: 99;
+    white-space: nowrap;
+}
+
+.navbar li {
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+}

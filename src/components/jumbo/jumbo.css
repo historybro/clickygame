@@ -1,0 +1,10 @@
+.header {
+    min-height: 400px;
+    padding: 180px 20px;
+    padding-bottom: 140px;
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+    background-image: url("https://soundontime.com/wp-content/uploads/2018/10/Vaporwave-Aesthetic.jpg");
+    color: white;
+}
