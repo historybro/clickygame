@@ -2,6 +2,7 @@
   "name": "clickgame",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://historybro.github.io/clickygame/",
   "engines": {
     "node": "10.15.0"
   },
