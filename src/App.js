@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import cards from "./cards.json";
-import Nav from "./Components/Navbar";
-import Jumbo from "./Components/Jumbo";
-import Wrap from "./Components/Wrapper";
-import Card from "./Components/Card";
-import Win from "./Components/Win"
+import Nav from "./Components/Navbar/";
+import Jumbo from "./Components/Jumbo/";
+import Wrap from "./Components/Wrapper/";
+import Card from "./Components/Card/";
+import Win from "./Components/Win/"
 import "./app.css";
 
 const disp0 = {
