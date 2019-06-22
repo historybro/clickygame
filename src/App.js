@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import cards from "./cards.json";
-import Nav from "./components/Nav";
+import Nav from "./components/navbar";
 import Jumbo from "./components/jumbo";
 import Wrap from "./components/wrapper";
 import Card from "./components/Card";
